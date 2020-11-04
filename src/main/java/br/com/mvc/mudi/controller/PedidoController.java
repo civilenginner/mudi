@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/pedido")
+@RequestMapping("pedido")
 public class PedidoController {
 
     @Autowired
     private PedidoRepository pedidoRepository;
 
-    @GetMapping("/formulario")
+    @GetMapping("formulario")
     public String formulario(RequisicaoNovoPedido requisicao) {
         return "pedido/formulario";
 
@@ -34,5 +34,4 @@ public class PedidoController {
         pedidoRepository.save(pedido);
         return "pedido/formulario";
     }
-
 }
