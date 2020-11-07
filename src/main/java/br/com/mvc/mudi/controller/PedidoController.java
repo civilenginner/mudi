@@ -2,7 +2,7 @@ package br.com.mvc.mudi.controller;
 
 import javax.validation.Valid;
 
-import br.com.mvc.mudi.controller.repository.PedidoRepository;
+import br.com.mvc.mudi.repository.PedidoRepository;
 import br.com.mvc.mudi.dto.RequisicaoNovoPedido;
 import br.com.mvc.mudi.model.Pedido;
 import org.springframework.beans.factory.annotation.Autowired;
