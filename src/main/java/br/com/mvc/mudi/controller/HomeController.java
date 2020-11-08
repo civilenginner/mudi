@@ -1,5 +1,6 @@
 package br.com.mvc.mudi.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 
@@ -24,8 +25,8 @@ public class HomeController {
     private PedidoRepository pedidoRepository;
 
     @GetMapping
-    public String home(Model model) {
-        List<Pedido> pedidos = pedidoRepository.findAll();
+    public String home(Model model, Principal principal) {
+        List<Pedido> pedidos = pedidoRepository.findAllByUsuario(principal.getName());
         model.addAttribute("pedidos", pedidos);
         return "home";
     }
